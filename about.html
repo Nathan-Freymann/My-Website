@@ -3,57 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | Your Name</title>
+    <title>About Me - Your Name</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-
-    <header class="main-header">
-        <nav class="navbar container">
+    <nav>
+        <div class="container">
             <a href="index.html" class="logo">Your Name</a>
-            <button class="menu-toggle" aria-label="Toggle navigation" id="menu-toggle">
-                <i class="fas fa-bars"></i>
-            </button>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="timeline.html">My Journey</a></li>
-                <li><a href="activities.html">Activities</a></li>
-                <li><a href="contact.html" class="btn btn-primary">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-<main class="content-wrapper container">
-    <section>
-        <h2>👋 About Me</h2>
-        <p class="bio-text">I am a final-year Computer Science student at [University Name] with a deep passion for clean code and innovative problem-solving. My focus areas include **Full-Stack Web Development** and **Data Science**. I thrive in collaborative environments and am always seeking opportunities to learn new technologies and contribute to meaningful projects.</p>
-        
-        <div class="bio-details">
-            <h3>Skills & Expertise</h3>
             <ul>
-                <li>Programming Languages: Python, JavaScript, Java, C++</li>
-                <li>Web Technologies: React, Node.js, HTML5, CSS3</li>
-                <li>Databases: PostgreSQL, MongoDB</li>
-                <li>Tools: Git, Docker, VS Code</li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="journey.html">Journey</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
-    </section>
-</main>
-    
-    <footer class="main-footer">
-        <div class="container footer-content">
-            <p>&copy; <span id="current-year"></span> Your Name. All rights reserved.</p>
-            <div class="social-links">
-                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-            </div>
-        </div>
-    </footer>
+    </nav>
 
-    <script src="script.js"></script>
+    <div class="page-header">
+        <h1>About Me</h1>
+        <p>Get to know me better - professionally and personally</p>
+    </div>
+
+    <main>
+        <div class="container">
+            <section>
+                <div class="about-content">
+                    <div class="profile-img">👨‍💻</div>
+                    <div class="about-text">
+                        <h2>Hello! I'm a Computer Science Student</h2>
+                        <p>I'm currently pursuing my degree in Computer Science at [University Name], expected to graduate in [Year]. My passion for technology started when I wrote my first "Hello World" program, and since then, I've been on an exciting journey of continuous learning and innovation.</p>
+                        <p>I specialize in web development, software engineering, and have a keen interest in artificial intelligence and machine learning. Beyond coding, I'm actively involved in student organizations where I contribute to building a vibrant tech community on campus.</p>
+                        <p>What drives me is the endless possibility to create solutions that can make a real difference. Whether it's building a web application, solving complex algorithms, or collaborating on open-source projects, I'm always eager to learn and grow.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="skills-section">
+                <h2>Technical Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-tag">Python</div>
+                    <div class="skill-tag">JavaScript</div>
+                    <div class="skill-tag">Java</div>
+                    <div class="skill-tag">C++</div>
+                    <div class="skill-tag">React</div>
+                    <div class="skill-tag">Node.js</div>
+                    <div class="skill-tag">HTML/CSS</div>
+                    <div class="skill-tag">SQL</div>
+                    <div class="skill-tag">MongoDB</div>
+                    <div class="skill-tag">Git/GitHub</div>
+                    <div class="skill-tag">Docker</div>
+                    <div class="skill-tag">Linux</div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Education</h2>
+                <div class="info-box">
+                    <h3>[University Name]</h3>
+                    <p><strong>Bachelor of Science in Computer Science</strong></p>
+                    <p>Expected Graduation: [Year]</p>
+                    <p>GPA: [Your GPA]</p>
+                    <p>Relevant Coursework: Data Structures, Algorithms, Database Systems, Web Development, Artificial Intelligence, Software Engineering</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Achievements</h2>
+                <div class="info-box">
+                    <ul style="list-style-position: inside; line-height: 2;">
+                        <li>Dean's List - [Semester/Year]</li>
+                        <li>First Place - [Hackathon Name]</li>
+                        <li>Scholarship Recipient - [Scholarship Name]</li>
+                        <li>Published Research Paper on [Topic]</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>Hobbies & Interests</h2>
+                <p style="text-align: center; margin-bottom: 2rem; font-size: 1.1rem;">Beyond coding, here's what I enjoy in my free time</p>
+                <div class="hobbies-grid">
+                    <div class="hobby-item">
+                        <div class="hobby-icon">📚</div>
+                        <h3>Reading</h3>
+                        <p>Tech blogs, sci-fi novels, and books on personal development. Currently reading "Clean Code" by Robert C. Martin.</p>
+                    </div>
+
+                    <div class="hobby-item">
+                        <div class="hobby-icon">🎮</div>
+                        <h3>Gaming</h3>
+                        <p>Enjoy strategy games and RPGs. Also interested in game development and have created a few simple games as side projects.</p>
+                    </div>
+
+                    <div class="hobby-item">
+                        <div class="hobby-icon">🏃</div>
+                        <h3>Running & Fitness</h3>
+                        <p>Regular running helps me stay healthy and clear my mind. Completed my first half-marathon last year!</p>
+                    </div>
+
+                    <div class="hobby-item">
+                        <div class="hobby-icon">📸</div>
+                        <h3>Photography</h3>
+                        <p>Love capturing moments and exploring creative perspectives. Mainly focus on landscape and street photography.</p>
+                    </div>
+
+                    <div class="hobby-item">
+                        <div class="hobby-icon">🎵</div>
+                        <h3>Music</h3>
+                        <p>Listen to various genres while coding. Also learning to play the guitar in my free time.</p>
+                    </div>
+
+                    <div class="hobby-item">
+                        <div class="hobby-icon">✈️</div>
+                        <h3>Travel</h3>
+                        <p>Passionate about exploring new places and experiencing different cultures. Dream destination: Japan!</p>
+                    </div>
+
+                    <div class="hobby-item">
+                        <div class="hobby-icon">🍳</div>
+                        <h3>Cooking</h3>
+                        <p>Experimenting with new recipes and cuisines. Cooking is like programming - follow the recipe, debug as needed!</p>
+                    </div>
+
+                    <div class="hobby-item">
+                        <div class="hobby-icon">🎨</div>
+                        <h3>Digital Art</h3>
+                        <p>Creating digital illustrations and UI designs. Combines my love for creativity and technology.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Why These Matter</h2>
+                <div class="info-box" style="line-height: 1.8;">
+                    <p>These hobbies aren't just pastimes - they contribute to my growth as a developer and individual:</p>
+                    <ul style="margin-top: 1rem; margin-left: 2rem; line-height: 2;">
+                        <li><strong>Reading</strong> keeps me updated with industry trends and best practices</li>
+                        <li><strong>Gaming</strong> teaches me about user experience and engagement</li>
+                        <li><strong>Fitness</strong> maintains my energy levels and mental clarity for long coding sessions</li>
+                        <li><strong>Photography</strong> trains my eye for design and composition</li>
+                        <li><strong>Music</strong> helps me focus and enhances my creativity</li>
+                        <li><strong>Travel</strong> broadens my perspective and cultural awareness</li>
+                        <li><strong>Cooking</strong> teaches patience and the importance of following processes</li>
+                        <li><strong>Digital Art</strong> improves my UI/UX design skills</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 [Your Name]. All rights reserved.</p>
+        <p>Built with HTML & CSS | <a href="#">Download CV</a></p>
+    </footer>
 </body>
 </html>

@@ -1,14 +1,21 @@
-/* Global Styles */
+/* =========================================================================
+ * 1. GLOBAL STYLES & VARIABLES
+ * ========================================================================= */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Color Variables */
 :root {
     --coral: #FF6F61;
+    --coral-light: #ff8f85; /* Lightened Coral for gradients/hover */
     --cream: #FFF5E6;
     --charcoal: #333333;
+    /* Custom ESTIEM Color */
+    --estiem-green: #3C8F69; 
 }
 
 body {
@@ -18,7 +25,17 @@ body {
     background-color: var(--cream);
 }
 
-/* Navigation */
+/* Reusable Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* =========================================================================
+ * 2. NAVIGATION & HEADER
+ * ========================================================================= */
+
 nav {
     background-color: var(--charcoal);
     padding: 1rem 0;
@@ -29,9 +46,6 @@ nav {
 }
 
 nav .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -62,16 +76,9 @@ nav a.active {
     color: var(--coral);
 }
 
-/* Container */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-}
-
-/* Page Header */
+/* Page Header (Used for inner pages like Activities) */
 .page-header {
-    background: linear-gradient(135deg, var(--coral) 0%, #ff8f85 100%);
+    background: linear-gradient(135deg, var(--coral) 0%, var(--coral-light) 100%);
     color: var(--cream);
     padding: 5rem 2rem;
     text-align: center;
@@ -87,9 +94,12 @@ nav a.active {
     font-size: 1.2rem;
 }
 
-/* Hero Section (Home page) */
+/* =========================================================================
+ * 3. HERO SECTION (Home page)
+ * ========================================================================= */
+
 .hero {
-    background: linear-gradient(135deg, var(--coral) 0%, #ff8f85 100%);
+    background: linear-gradient(135deg, var(--coral) 0%, var(--coral-light) 100%);
     color: var(--cream);
     padding: 8rem 2rem;
     text-align: center;
@@ -118,7 +128,10 @@ nav a.active {
     animation: fadeInUp 1s ease 0.4s backwards;
 }
 
-/* Buttons */
+/* =========================================================================
+ * 4. BUTTONS & UTILITIES
+ * ========================================================================= */
+
 .btn {
     padding: 0.75rem 2rem;
     border-radius: 30px;
@@ -150,7 +163,10 @@ nav a.active {
     color: var(--coral);
 }
 
-/* Main Content Area */
+/* =========================================================================
+ * 5. MAIN LAYOUT & SECTION HEADINGS
+ * ========================================================================= */
+
 main {
     min-height: calc(100vh - 300px);
     padding: 3rem 0;
@@ -171,7 +187,12 @@ section h3 {
     margin-bottom: 1rem;
 }
 
-/* About Content */
+/* =========================================================================
+ * 6. SPECIFIC CONTENT SECTIONS
+ * ========================================================================= */
+
+/* 6.1. About Content */
+
 .about-content {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -222,7 +243,8 @@ section h3 {
     font-size: 0.9rem;
 }
 
-/* Projects Grid */
+/* 6.2. Projects Grid */
+
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -296,7 +318,8 @@ section h3 {
     font-size: 0.8rem;
 }
 
-/* Timeline */
+/* 6.3. Journey/Timeline */
+
 .timeline {
     position: relative;
     max-width: 800px;
@@ -343,7 +366,9 @@ section h3 {
     display: block;
 }
 
-/* Activities/Association Cards */
+/* 6.4. Activities & ESTIEM Section */
+
+/* Standard Activity Card Grid */
 .activities-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -385,7 +410,40 @@ section h3 {
     margin-bottom: 0.5rem;
 }
 
-/* Hobbies Grid */
+/* --- Specific ESTIEM Section Style (New) --- */
+.estiem-section {
+    /* Use the new green color */
+    background-color: var(--estiem-green); 
+    color: var(--cream); /* White text for contrast */
+    padding: 4rem 0; /* Changed padding to 0 top/bottom, let internal container handle sides */
+    margin-bottom: 4rem;
+}
+
+.estiem-section h2 {
+    color: var(--cream); /* Ensure heading is also white */
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.estiem-section h3 {
+    color: var(--cream); /* Ensure sub-heading is also white */
+}
+
+.estiem-section .estiem-timeline-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.estiem-section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+
+/* 6.5. Hobbies Grid */
+
 .hobbies-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -414,7 +472,8 @@ section h3 {
     margin-bottom: 0.5rem;
 }
 
-/* Contact Form */
+/* 6.6. Contact Form */
+
 .contact-content {
     max-width: 600px;
     margin: 0 auto;
@@ -460,7 +519,7 @@ section h3 {
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: #ff8f85;
+    border-color: var(--coral-light);
 }
 
 .submit-btn {
@@ -477,7 +536,7 @@ section h3 {
 }
 
 .submit-btn:hover {
-    background-color: #ff8f85;
+    background-color: var(--coral-light);
 }
 
 .social-links {
@@ -498,7 +557,10 @@ section h3 {
     transform: scale(1.2);
 }
 
-/* Footer */
+/* =========================================================================
+ * 7. FOOTER
+ * ========================================================================= */
+
 footer {
     background-color: var(--charcoal);
     color: var(--cream);
@@ -520,7 +582,10 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* Animations */
+/* =========================================================================
+ * 8. ANIMATIONS
+ * ========================================================================= */
+
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -532,8 +597,12 @@ footer a:hover {
     }
 }
 
-/* Responsive Design */
+/* =========================================================================
+ * 9. RESPONSIVE DESIGN (Media Queries)
+ * ========================================================================= */
+
 @media (max-width: 768px) {
+    /* Navigation */
     nav .container {
         flex-direction: column;
         gap: 1rem;
@@ -546,6 +615,7 @@ footer a:hover {
         font-size: 0.9rem;
     }
 
+    /* Hero & Headers */
     .hero h1 {
         font-size: 2.5rem;
     }
@@ -557,28 +627,31 @@ footer a:hover {
     .page-header h1 {
         font-size: 2rem;
     }
-
-    .about-content {
-        grid-template-columns: 1fr;
-    }
-
-    .timeline::before {
-        left: 0;
-    }
-
-    .timeline-content {
-        width: calc(100% - 40px);
-        margin-left: 40px !important;
-    }
-
+    
     .hero .cta-buttons {
         flex-direction: column;
         align-items: center;
+    }
+
+    /* Layout Grids */
+    .about-content {
+        grid-template-columns: 1fr;
     }
 
     .projects-grid,
     .activities-grid,
     .hobbies-grid {
         grid-template-columns: 1fr;
+    }
+
+    /* Timeline */
+    .timeline::before {
+        left: 0;
+    }
+
+    /* Adjust timeline items to start from the left */
+    .timeline-content {
+        width: calc(100% - 40px);
+        margin-left: 40px !important;
     }
 }
